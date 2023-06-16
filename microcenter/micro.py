@@ -6,7 +6,15 @@ config = toml.load('config.toml')
 items = config['items']
 store_id = config['user']['store_id']
 headers = {
-    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.81 Safari/537.36',
+    'Host': 'www.microcenter.com',
+    'Upgrade-Insecure-Requests': '1',
+    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36 Edg/114.0.1823.43',
+    'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
+    'Sec-Fetch-Site': 'same-origin',
+    'Sec-Fetch-Mode': 'navigate',
+    'Sec-Fetch-User': '?1',
+    'Sec-Fetch-Dest': 'document',
+    'Referer': 'https://www.microcenter.com/search',
     'Accept-Language': 'en-US,en;q=0.9',
 }
 
@@ -25,6 +33,8 @@ for item in items:
         availability_status = "in stock"
     else:
         availability_status = "error"
+        print(f"Error checking inventory for {item_name}: {response.text}")
+
 
     print(f"{item_name}: {availability_status}")
     items_availability[item_name] = availability_status
