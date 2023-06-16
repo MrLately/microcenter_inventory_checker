@@ -1,7 +1,7 @@
 [user]
 email_sender = "autogrind02@gmail.com"
-password = "wvjbdqjmtsnnkbwf"
-email_reciever = "jlapyth@gmail.com"
+sender_password = "wvjbdqjmtsnnkbwf"
+email_receiver = "jlapyth@gmail.com"
 store_id = "?storeID=051"
 
 [[items]]
