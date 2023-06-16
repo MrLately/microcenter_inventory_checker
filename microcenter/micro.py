@@ -1,23 +1,8 @@
 import requests
 import toml
-import yagmail
-
-def send_notification(items_availability):
-    config = toml.load('config.toml')
-    user = config['user']['email_sender']
-    password = config['user']['password']
-    email_reciever = config['user']['email_reciever']
-    
-    yag = yagmail.SMTP(user=user, password=password)
-    subject = "Product Availability Notification"
-    body = ""
-    for item_name, availability_status in items_availability.items():
-        body += f"The {item_name} is {availability_status}.\n"
-    yag.send(to=email_reciever, subject=subject, contents=body)
-    print("Sent notification")
+import email_notif
 
 config = toml.load('config.toml')
-
 items = config['items']
 store_id = config['user']['store_id']
 headers = {
@@ -45,5 +30,4 @@ for item in items:
     items_availability[item_name] = availability_status
 
 if items_availability:
-    send_notification(items_availability)
-
+    email_notif.send_notification(items_availability)
