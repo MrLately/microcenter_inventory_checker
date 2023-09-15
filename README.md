@@ -9,6 +9,7 @@ If you dont want to use the email function then delete or comment out the last 2
 ![micro6](https://github.com/MrLately/microcenter_inventory_checker/assets/94589563/575db81e-548b-4136-8557-d2406f702918)
 
 
+
 If you are using gmail for the sender email you need to create an app password and use that instead of the actual email password.
 Directions for creating an app password with gmail here https://support.google.com/mail/answer/185833?hl=en
 
@@ -18,10 +19,12 @@ Navigate to the "your store" dropdown and select your stores location.
 ![micro](https://github.com/MrLately/microcenter_inventory_checker/assets/94589563/ac892f8c-8e22-408d-bbc0-422ea038e205)
 
 
+
 When you select your local store the store id will be added to the end of the url.
 Copy the store id and paste it into the config.toml file, in between the "" on the store_id= line.
 
 ![micro2](https://github.com/MrLately/microcenter_inventory_checker/assets/94589563/d69c7ecc-fdd5-4f1c-9dbb-a9d54f5ed227)
+
 
 
 To add an item you need to find it on the site and copy the whole url.
