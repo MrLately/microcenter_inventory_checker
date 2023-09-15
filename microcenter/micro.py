@@ -1,6 +1,8 @@
 import requests
 import toml
 import email_notif
+import re
+import time
 
 config = toml.load('config.toml')
 items = config['items']
@@ -19,6 +21,7 @@ headers = {
 }
 
 items_availability = {}
+delay_between_items = 1
 
 for item in items:
     item_name = item['name']
@@ -27,17 +30,39 @@ for item in items:
     response = requests.get(item_url, headers=headers)
     availability = response.text
 
-    if 'https://schema.org/Outofstock' in availability:
-        availability_status = "currently out of stock"
-    elif 'https://schema.org/Instock' in availability:
-        availability_status = "in stock"
+    if 'https://schema.org/Instock' in availability:
+        inventory_pattern = r'<span class="inventoryCnt">(\d+)\s*<span class="msgInStock">NEW IN STOCK</span></span>'
+
+        match = re.search(inventory_pattern, availability)
+
+        availability_status = "In stock!"
+        inventory_count = match.group(1) if match else "N/A"
+
+        print(f"{availability_status} : {item_name} : {inventory_count} available")
+
+        items_availability[item_name] = {
+            'availability_status': availability_status,
+            'inventory_count': inventory_count
+        }
+    elif 'https://schema.org/Outofstock' in availability:
+        availability_status = "Sold out"
+        print(f"{availability_status} : {item_name}")
+        items_availability[item_name] = {
+            'availability_status': availability_status,
+            'inventory_count': "N/A"
+        }
     else:
         availability_status = "error"
         print(f"Error checking inventory for {item_name}: {response.text}")
+        items_availability[item_name] = {
+            'availability_status': availability_status,
+            'inventory_count': "N/A"
+        }
 
+    time.sleep(delay_between_items)
 
-    print(f"{item_name}: {availability_status}")
-    items_availability[item_name] = availability_status
+if items_availability:
+    email_notif.send_notification(items_availability)
 
 if items_availability:
     email_notif.send_notification(items_availability)
