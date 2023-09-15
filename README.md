@@ -43,3 +43,6 @@ Dont leave any blank. if theyre not being used delete or comment the item out. l
 
 ![micro4](https://github.com/MrLately/microcenter_inventory_checker/assets/94589563/323bc260-161a-472e-b8d3-782a9dd78d3a)
 
+---------------------------------------------------------------------------------------------------------------------------------
+
+When everything is set you can run micro.py
