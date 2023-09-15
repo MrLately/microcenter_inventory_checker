@@ -18,7 +18,7 @@ Navigate to the "your store" dropdown and select your stores location.
 ![micro](https://github.com/MrLately/microcenter_inventory_checker/assets/94589563/ac892f8c-8e22-408d-bbc0-422ea038e205)
 
 When you select your local store the store id will be added to the end of the url.
-Copy the store id and paste it into the config.toml file.
+Copy the store id and paste it into the config.toml file, in between the "" on the store_id= line.
 
 ![micro2](https://github.com/MrLately/microcenter_inventory_checker/assets/94589563/58047084-058d-4317-9503-69751fafe867)
 
