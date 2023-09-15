@@ -22,7 +22,8 @@ to add an item you need to find it on the site and copy the whole url.
 paste it into the quotes "" on the url= line.
 give the item a proper name in between the "" on the name= line.
 
-![micro3](https://github.com/MrLately/microcenter_inventory_checker/assets/94589563/eae6e3c7-43b2-4d4d-bc20-aefec776968a)
+![micro5](https://github.com/MrLately/microcenter_inventory_checker/assets/94589563/ed36cfe4-44be-4f91-ae80-9c514d6fb6b0)
+
 
 you may add as many items as you like.
 dont leave any blank. if theyre not being used delete or comment the item out.
