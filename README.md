@@ -45,4 +45,4 @@ Dont leave any blank. if theyre not being used delete or comment the item out. l
 
 ---------------------------------------------------------------------------------------------------------------------------------
 
-When everything is set you can run micro.py
+When everything is set make sure you have installed the required modules from requirements.txt then you can run micro.py
