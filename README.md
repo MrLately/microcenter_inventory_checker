@@ -12,6 +12,7 @@ to get your local store id you need to first go to https://www.microcenter.com/
 navigate to the "your store" dropdown and select your stores location.
 when you select your local store the store id will be added to the end of the url.
 copy the store id and paste it into the config.toml file.
+
 ![micro](https://github.com/MrLately/microcenter_inventory_checker/assets/94589563/ac892f8c-8e22-408d-bbc0-422ea038e205)
 
 ![micro2](https://github.com/MrLately/microcenter_inventory_checker/assets/94589563/58047084-058d-4317-9503-69751fafe867)
