@@ -4,6 +4,10 @@ You need to configure the user settings in the config.toml file first.
 
 The email sender and receiver can be the same email but it will look like an email to yourself.
 I like to keep an extra email address for sending notifications from various scripts that I use.
+If you dont want to use the email function then delete or comment out the last 2 lines of micro.py.
+
+![micro6](https://github.com/MrLately/microcenter_inventory_checker/assets/94589563/575db81e-548b-4136-8557-d2406f702918)
+
 
 If you are using gmail for the sender email you need to create an app password and use that instead of the actual email password.
 Directions for creating an app password with gmail here https://support.google.com/mail/answer/185833?hl=en
