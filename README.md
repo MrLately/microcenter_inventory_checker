@@ -17,11 +17,11 @@ Navigate to the "your store" dropdown and select your stores location.
 
 ![micro](https://github.com/MrLately/microcenter_inventory_checker/assets/94589563/ac892f8c-8e22-408d-bbc0-422ea038e205)
 
+
 When you select your local store the store id will be added to the end of the url.
 Copy the store id and paste it into the config.toml file, in between the "" on the store_id= line.
 
-![micro2](https://github.com/MrLately/microcenter_inventory_checker/assets/94589563/58047084-058d-4317-9503-69751fafe867)
-
+![micro2](https://github.com/MrLately/microcenter_inventory_checker/assets/94589563/d69c7ecc-fdd5-4f1c-9dbb-a9d54f5ed227)
 
 
 To add an item you need to find it on the site and copy the whole url.
@@ -35,3 +35,4 @@ You may add as many items as you like.
 Dont leave any blank. if theyre not being used delete or comment the item out. lines 23, 24, and 25 in the pic as an example.
 
 ![micro4](https://github.com/MrLately/microcenter_inventory_checker/assets/94589563/323bc260-161a-472e-b8d3-782a9dd78d3a)
+
