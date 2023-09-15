@@ -15,6 +15,7 @@ If you are using gmail for the sender email you need to create an app password a
 Directions for creating an app password with gmail here https://support.google.com/mail/answer/185833?hl=en
 
 
+
 To get your local store id you need to first go to https://www.microcenter.com/
 Navigate to the "your store" dropdown and select your stores location.
 
