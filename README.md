@@ -26,6 +26,6 @@ give the item a proper name in between the "" on the name= line.
 
 
 you may add as many items as you like.
-dont leave any blank. if theyre not being used delete or comment the item out.
+dont leave any blank. if theyre not being used delete or comment the item out. lines 23, 24, and 25 in the pic as an example.
 
 ![micro4](https://github.com/MrLately/microcenter_inventory_checker/assets/94589563/323bc260-161a-472e-b8d3-782a9dd78d3a)
